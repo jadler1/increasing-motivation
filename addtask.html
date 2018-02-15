@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Add Task</title>
+  <link rel="stylesheet" type="text/css" href="motivation.css"/>
+  <script src="motivation.js"></script>
+</head>
+<body>
+  <div class="header">
+    <a href="schedule.html">
+      <img class="left" src="images/back.png"
+    </a>
+    <a href="calendar.html">
+      <img class="right" src="images/calendar.png">
+    </a>
+    <div class="center">
+      Add Task
+    </div>
+  </div>
+  <hr>
 
-  </body>
+
+
+  <form>
+
+    <div>
+    Task name: <br>
+    <input type="text" name="taskname">
+    </div>
+    <button type="button" onClick="createTask()">Create Task</button>
+      <!--
+    <div class="calendar">
+      <div class="month">
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li class="year">
+             August<br>
+            <span style="font-size:18px">2017</span>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+
+      <ul class="days">
+
+      </ul>
+    </div> -->
+  </form>
+  <script src="motivation.js"></script>
+</body>
 </html>
 

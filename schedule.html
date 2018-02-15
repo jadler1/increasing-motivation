@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Schedule</title>
+  <link rel="stylesheet" type="text/css" href="motivation.css"/>
+</head>
+<body>
+  <div class="header">
+    <a href="addtask.html">
+      <img class="left" src="images/plus.png">
+    </a>
+    <a href="calendar.html">
+      <img class="right" src="images/calendar.png">
+    </a>
+    <div class="center" id="points">
+    </div>
+  </div>
+  <hr>
+    <table class="task-wrapper">
+      <tr>
+        <th class="small-column"></th>
+        <th class="big-column">Task</th>
+        <th class="big-column">Next Due</th>
+        <th class="big-column">Points</th>
+        <th class ="small-column"></th>
+      </tr>
+      <div class="t_array"></div>
+    </table>
+    <script src="motivation.js"></script>
+</body>
 </html>
