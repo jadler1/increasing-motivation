@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>Add Task</title>
   <link rel="stylesheet" type="text/css" href="motivation.css"/>
-  <script src="motivation.js"></script>
 </head>
 <body>
   <div class="header">
@@ -22,22 +21,19 @@
 
 
 
-  <form>
+  <form name="addTask">
 
     <div>
     Task name: <br>
     <input type="text" name="taskname">
     </div>
-    <button type="button" onClick="createTask()">Create Task</button>
-      <!--
     <div class="calendar">
       <div class="month">
         <ul>
           <li class="prev">&#10094;</li>
           <li class="next">&#10095;</li>
-          <li class="year">
-             August<br>
-            <span style="font-size:18px">2017</span>
+          <li id="year">
+
           </li>
         </ul>
       </div>
@@ -52,12 +48,14 @@
         <li>Su</li>
       </ul>
 
-      <ul class="days">
+      <div id="days">
 
-      </ul>
-    </div> -->
+      </div>
+    </div>
   </form>
   <script src="motivation.js"></script>
+  <button type="button" onClick="createTask()">Create Task</button>
+
+
 </body>
 </html>
-

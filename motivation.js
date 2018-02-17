@@ -3,76 +3,97 @@ var tasks = [];
 var points = 0;
 var taskcount=0;
 
-if()
+//display the points on the main screen
 var pointDisplay=document.getElementById("points");
-pointDisplay.innerHTML = points;
+if(pointDisplay){
+  pointDisplay.innerHTML = points;
+}
 
+//display the calendar on the add task screen
+var days = document.getElementById("days");
+if(days){
+  days.innerHTML = getCalendarDays();
+}
 
-var days = document.getElementByClassName("days");
-days.innerHTML = getCalendarDays();
+//display the month and year on the calendar on the add task screen
+var month_head = document.getElementById("year");
+if(month_head){
+  month_head.innerHTML = getCalendarMonth();
+}
+
+//Create a new task when the button is pressed
 function createTask(){
-  var taskname= document.getElementByName("taskname").value;
+  var taskname= document.forms["addTask"]["taskname"].value;
   var due="not yet implemented";
-  var points = 10;
+  var points = calculatePoints(due);
   tasks[taskcount]=[taskname,due,points];
   taskcount++;
-
 }
 
-
-var t_array = document.getElementByClassName("t_array");
-for(var i = 0; i < taskcount;i++)
-{
-//  t_array
-}
+//Properly aligns the calendar for the add task screen
 function getCalendarDays(){
-  var months = ["January","Febuary","March", "April", "May", "June","July","August","September", "October","November","December"];
-  var date = Date();
-  var year = date.getYear();
+  var date = new Date();
+  var year = date.getFullYear();
   var monthno = date.getMonth();
-  var month = months[monthno];
   var daysThisMonth = getDaysThisMonth(monthno, year);
-  var weekdays = ["S","M","T","W","T","F","S"]
   var weekdayno = date.getUTCDay();
-  var weekday= weekdays[weekdayno];
   var day = date.getUTCDate();
-  for(var i = 0; i < daysThisMonth; i++){
-
-  }
   var cal = [];
-  // "<li>" +
-  // "<li>1</li><li>2</li>
-  // <li>3</li>
-  // <li>4</li>
-  // <li>5</li>
-  // <li>6</li>
-  // <li>7</li>
-  // <li>8</li>
-  // <li>9</li>
-  // <li><span class=\"active\">10</span></li>
-  // <li>11</li>
-  // <li>12</li>
-  // <li>13</li>
-  // <li>14</li>
-  // <li>15</li>
-  // <li>16</li>
-  // <li>17</li>
-  // <li>18</li>
-  // <li>19</li>
-  // <li>20</li>
-  // <li>21</li>
-  // <li>22</li>
-  // <li>23</li>
-  // <li>24</li>
-  // <li>25</li>
-  // <li>26</li>
-  // <li>27</li>
-  // <li>28</li>
-  // <li>29</li>
-  // <li>30</li>
-  // <li>31</li>"
+  var i =0;
+  //fill in the calendar
+  for(i = 1; i <= daysThisMonth; i++){
+    cal.push(i);
+  }
+
+
+  //add the last month padding
+  var daysLastMonth=0;
+  if(monthno==0)
+  {
+    daysLastMonth=getDaysThisMonth(11,year-1);
+  }
+  else{
+    daysLastMonth=getDaysThisMonth(monthno-1, year);
+  }
+  i = (day%7)-1;
+  while(i%7!=weekdayno)
+  {
+    cal.unshift(daysLastMonth);
+    daysLastMonth--;
+    i++;
+  }
+
+  //add the next month padding
+  i=1;
+  while(cal.length < 42)
+  {
+    cal.push(i);
+    i++;
+  }
+
+  //actually fill in the calendar with html tags
+  var calhtml= "";
+  var currentMonth=false;
+  for(i=0; i<42; i++){
+    if(cal[i]==1){
+      currentMonth = !currentMonth;
+    }
+    if(cal[i] == day && i >= day-1)
+    {
+      calhtml += "<li><span class=\"active\">"+cal[i]+"</span></li>";
+    }
+    else if(currentMonth){
+      calhtml+= "<li>" + cal[i]+"</li>";
+    }
+    else{
+      calhtml+= "<li><span class=\"inactive\">"+cal[i]+"</span></li>";
+    }
+  }
+  return "<ul>" +calhtml + "</ul>";
 }
 
+//Returns the number of days in the given month and year taking into account
+//leap years
 function getDaysThisMonth( monthno,  year){
   switch(monthno){
     case 0:
@@ -91,4 +112,21 @@ function getDaysThisMonth( monthno,  year){
     default:
       return 30;
   }
+}
+
+//Gets the month and year header
+function getCalendarMonth()
+{
+  var date= new Date();
+  var year = date.getFullYear();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
+  var month = months[date.getMonth()];
+  return month +"<br><span style=\"font-size:18px\">" + year + "</span>";
+}
+
+
+
+//not yet implemented
+function calculatePoints(due){
+  return 10;
 }
