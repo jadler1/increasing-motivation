@@ -249,7 +249,5 @@ function updatePoints(){
 //This is just for demoing the project. It would not be in the final implementation
 function fillList(){
   var hw = new Date(currentDate.getTime()+172800000);
-  var workout = new Date(currentDate.getTime()+86400000);
   tasks.push(["DTC User Testing", hw, calculatePoints(hw)]);
-  tasks.push(["Workout", workout, calculatePoints(workout)]);
 }
