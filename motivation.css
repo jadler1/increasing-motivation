@@ -30,16 +30,24 @@
 
 .big-column{
   width:30%;
+  font-size: 20px;
+  text-align: center;
 }
 
 .small-column{
   width:5%;
+  font-size: 20px;
 }
 
 .construction{
   width: 100%;
 }
 
+
+.taskname{
+  font-size: 20px;
+
+}
 
 
 .calendar {
@@ -53,7 +61,7 @@ ul {
 }
 
 .month {
-    padding: 70px 0;
+    padding: 10px 0;
     width: 100%;
     background: #1abc9c;
     text-align: center;
@@ -71,12 +79,12 @@ ul {
     letter-spacing: 3px;
 }
 
-.month .prev {
+.month #prev {
     float: left;
     padding-top: 10px;
 }
 
-.month .next {
+.month #next {
     float: right;
     padding-top: 10px;
 }
@@ -118,4 +126,14 @@ ul {
 
 #days li .inactive {
   color: #BBB;
+}
+
+
+
+
+.checkbox{
+	width: 60px;
+	height: 60px;
+	border: 5px solid black;
+	border-radius: 50%;
 }

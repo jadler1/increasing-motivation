@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Add Task</title>
   <link rel="stylesheet" type="text/css" href="motivation.css"/>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/jquery.js"></script>
 </head>
 <body>
   <div class="header">
@@ -23,15 +25,17 @@
 
   <form name="addTask">
 
-    <div>
+    <div class = "taskname">
     Task name: <br>
     <input type="text" name="taskname">
-    </div>
+  </div><br>
     <div class="calendar">
       <div class="month">
         <ul>
-          <li class="prev">&#10094;</li>
-          <li class="next">&#10095;</li>
+          <div id="changeMonth">
+            <li id="prev">&#10094;</li>
+            <li id="next">&#10095;</li>
+          </div>
           <li id="year">
 
           </li>
@@ -39,21 +43,27 @@
       </div>
 
       <ul class="weekdays">
+        <li>Su</li>
         <li>Mo</li>
         <li>Tu</li>
         <li>We</li>
         <li>Th</li>
         <li>Fr</li>
         <li>Sa</li>
-        <li>Su</li>
       </ul>
 
       <div id="days">
 
       </div>
     </div>
+    <br>
+    <div class="time">
+      Time Due: <br>
+      <input type="time" name="time">
+    </div>
+
   </form>
-  <script src="motivation.js"></script>
+  <script src="scripts/motivation.js"></script>
   <button type="button" onClick="createTask()">Create Task</button>
 
 

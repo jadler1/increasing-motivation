@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <title>Schedule</title>
   <link rel="stylesheet" type="text/css" href="motivation.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="Scripts/jquery-3.3.1.min.js"></script>
+  <script src="Scripts/jquery.js"></script>
 </head>
 <body>
   <div class="header">
@@ -18,15 +21,16 @@
   </div>
   <hr>
     <table class="task-wrapper">
-      <tr>
+      <tr id="task-header">
         <th class="small-column"></th>
         <th class="big-column">Task</th>
         <th class="big-column">Next Due</th>
         <th class="big-column">Points</th>
         <th class ="small-column"></th>
       </tr>
-      <div class="t_array"></div>
+
+      <div id="t_array"></div>
     </table>
-    <script src="motivation.js"></script>
+    <script src="scripts/motivation.js"></script>
 </body>
 </html>
