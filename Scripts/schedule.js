@@ -1,4 +1,3 @@
-const currentDate= new Date();
 var tasks = []
 var taskcount=0;
 var points = 0;
@@ -13,14 +12,6 @@ if(localStorage.getItem("points")){
   points = parseInt(localStorage.getItem("points"));
 }
 
-
-////Schedule.html
-/////////////////////////////////////
-//Switch to true and the task list will autopopulate
-var devMode = false;
-if(devMode){
-  fillList();
-}
 
 //display the points on the main screen
 var pointDisplay=document.getElementById("points");
@@ -72,17 +63,9 @@ function updatePoints(){
 
 
 
-
-//This is just for demoing the project. It would not be in the final implementation
-function fillList(){
-  var hw = new Date(currentDate.getTime()+172800000);
-  tasks.push(["DTC User Testing", hw.getTime()]);
-}
-
-
 //uses a logistic curve to calculate points based on a given date
 function calculatePoints(due){
-  var newpoints = due-currentDate.getTime();
+  var newpoints = due-new Date().getTime();
   newpoints = newpoints/86400000;
   newpoints -= 3.5;
   newpoints *=-1;
@@ -92,7 +75,7 @@ function calculatePoints(due){
 }
 
 function timeTillDue(due){
-  due = due-currentDate.getTime();
+  due = due-new Date().getTime();
   var timeDisp= "";
   var days = Math.floor(due/86400000);
   due = due%86400000;
