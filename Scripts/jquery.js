@@ -17,6 +17,18 @@ $(document).ready(function(){
     $("tbody:empty").remove();
     completeTask(index);
   });
+  $("tr").on("click", ".options", function(){
+    console.log($(this));
+  });
+  $("#addtask").click(function(){
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("taskcount", taskcount);
+    localStorage.setItem("points", points);
+  });
+  if(document.title == "Add Task"){
+    $("#prev").click(prevMonth);
+    $("#next").click(nextMonth);
+  }
 
 
 });

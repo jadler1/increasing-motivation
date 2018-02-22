@@ -1,7 +1,13 @@
 //an array of all the tasks
 var tasks = [];
-var points = 0;
+if(localStorage.getItem("tasks")){
+  tasks = JSON.parse(localStorage.getItem("tasks"));
+}
+
 var taskcount=0;
+if(localStorage.getItem("taskcount")){
+  taskcount = localStorage.getItem("taskcount");
+}
 
 //The calendar, defaults to due today
 const currentDate = new Date();
@@ -41,10 +47,11 @@ function createTask(){
   var minute = document.forms["addTask"]["time"].value.split(":")[1];
   activeDate.setHours(hour);
   activeDate.setMinutes(minute);
-  var points = calculatePoints(activeDate);
-  tasks[taskcount]=[taskname,activeDate,points];
-  console.log(tasks[taskcount]);
+  tasks[taskcount]=[taskname,activeDate.getTime()];
   taskcount++;
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("taskcount", taskcount);
+  document.location.href="schedule.html";
 }
 
 
@@ -92,7 +99,7 @@ function getCalendarDays(){
     if(cal[i]==1){
       currentMonth = !currentMonth;
     }
-    if(cal[i] == day && ((day>15 && i >= day-1)||(day<16 && i<30)))
+    if(cal[i] == day && ((day>15 && i >= day-1)||(day<16 && i<29)))
     {
       calhtml += "<li><span class=\"active\">"+cal[i]+"</span></li>";
     }
@@ -131,25 +138,10 @@ function getDaysThisMonth(mo, yr){
 //Gets the month and year header
 function getCalendarMonth()
 {
-  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"];
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var month = months[monthno];
   return month +"<br><span style=\"font-size:18px\">" + year + "</span>";
 }
-
-
-
-//uses a logistic curve to calculate points based on a given date
-function calculatePoints(due){
-  var points = due.getTime()-currentDate.getTime();
-  points = points/86400000;
-  points -= 3.5;
-  points *=-1;
-  points = (Math.exp(points))+1;
-  points= Math.floor(100/points);
-
-  return points;
-}
-
 
 
 //sets the currently selected day
@@ -157,11 +149,11 @@ function setActiveDay(day){
   var newDate = new Date(year, monthno, day);
   if(newDate>currentDate){
     activeDate= newDate;
-    updateCalendar();
   }
   else {
-    return true;
+    activeDate=currentDate;
   }
+  updateCalendar();
 }
 
 //Not currently implemented
@@ -173,10 +165,7 @@ function prevMonth(){
   else{
     monthno--;
   }
-  if(setActiveDay(1))
-  {
-    activeDate=currentDate;
-  }
+  setActiveDay(1);
 }
 
 //not currently implemented
@@ -189,65 +178,4 @@ function nextMonth(){
     monthno++
   }
   setActiveDay(1);
-}
-
-
-////Schedule.html
-/////////////////////////////////////
-//Switch to true and the task list will autopopulate
-var devMode = true;
-if(devMode){
-  fillList();
-}
-
-//display the points on the main screen
-var pointDisplay=document.getElementById("points");
-if(pointDisplay){
-  updatePoints();
-}
-
-//display the tasks on the main screen
-var tasklist = document.getElementsByClassName("task-wrapper")[0];
-if(tasklist){
-  fillTaskList();
-}
-
-
-//Complete the task and earn the points
-function completeTask(taskno){
-  points+=tasks[taskno][2];
-  tasks= tasks.filter(function(x, index){
-    return taskno != index;
-  });
-  fillTaskList();
-  updatePoints();
-}
-
-//Fills the task list with html elements
-function fillTaskList(){
-  var i = 0;
-  tasks.forEach(function(task){
-      tasklist.innerHTML = tasklist.innerHTML + fillTask(task[0],task[1],task[2],i);
-   i++;
- });
-}
-
-//Add a row to the task list with the new task info
-function fillTask(name, duedate, points, index){
-	var rowData = "<tr><td class=\"small-column\"><div id=\"task"+index+"\" class=\"checkbox\"></div></td><td class=\"big-column\">"+ name +"</td><td class=\"big-column\">"+ duedate +"</td><td class=\"big-column\">"+ points +"</td><td class=\"small-column\"><i class=\"material-icons\">more_horiz</i></td></tr>";
-	return rowData;
-}
-
-//updates the point display
-function updatePoints(){
-    pointDisplay.innerHTML = points;
-}
-
-
-
-
-//This is just for demoing the project. It would not be in the final implementation
-function fillList(){
-  var hw = new Date(currentDate.getTime()+172800000);
-  tasks.push(["DTC User Testing", hw, calculatePoints(hw)]);
 }
