@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="Scripts/jquery-3.3.1.min.js"></script>
   <script src="Scripts/jquery.js"></script>
+  <script type="text/javascript" src="Scripts/wickedpicker/src/wickedpicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="Scripts/wickedpicker/stylesheets/wickedpicker.css"/>
 </head>
 <body>
   <div class="header">
@@ -27,8 +29,7 @@
   <form name="addTask">
 
     <div class = "taskname">
-    Task name: <br>
-    <input type="text" name="taskname">
+    <input type="text" name="taskname" placeholder="Task Name">
   </div><br>
     <div class="calendar">
       <div class="month">
@@ -58,14 +59,16 @@
       </div>
     </div>
     <br>
-    <div class="time">
+    <div class="timepicker">
       Time Due: <br>
-      <input type="time" name="time">
+      <input type="text" name="timepicker" class="timepicker"/>
     </div>
 
   </form>
   <script src="Scripts/addtask.js"></script>
+  <div class="addTaskButton">
   <button type="button" onClick="createTask()">Create Task</button>
+  </div>
 
 
 </body>
