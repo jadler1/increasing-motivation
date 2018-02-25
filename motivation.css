@@ -46,15 +46,21 @@
 
 .taskname{
   font-size: 20px;
-
+  text-align: center;
 }
 
 
 .calendar {
-  width: 40%;
+  width: 100%;
 }
 
+.timepicker{
+	text-align: center;
+}
 
+.addTaskButton{
+	text-align: center;
+}
 
 ul {
   list-style-type: none;
@@ -105,16 +111,18 @@ ul {
 #days {
     padding: 10px 0;
     background: #eee;
-    margin: 0;
+    margin-left: 0;
 }
 
 #days li {
     list-style-type: none;
     display: inline-block;
-    width: 14.2%;
+    width: 13.2%;
     margin-bottom: 5px;
     font-size:12px;
     color: #777;
+	margin-left: 0;
+	text-align: center;
 }
 
 #days li .active {

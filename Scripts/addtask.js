@@ -14,7 +14,7 @@ const currentDate = new Date();
 var activeDate= new Date();
 var monthno= activeDate.getMonth();
 var year = activeDate.getFullYear();
-
+$('.timepicker').wickedpicker();
 
 //////addtask.html
 ///////////////////////////////////////////////////
@@ -23,15 +23,6 @@ var days = document.getElementById("days");
 var month_head = document.getElementById("year");
 if(days && month_head){
   updateCalendar();
-  minutes = activeDate.getMinutes();
-  hours = activeDate.getHours();
-  if(minutes <10){
-    minutes ="0"+minutes;
-  }
-  if(hours<10){
-    hours = "0"+hours
-  }
-  document.forms["addTask"]["time"].value = hours+":"+minutes;
 }
 
 //update the contents of the calendar
@@ -43,8 +34,8 @@ function updateCalendar(){
 //Create a new task when the button is pressed
 function createTask(){
   var taskname= document.forms["addTask"]["taskname"].value;
-  var hour=document.forms["addTask"]["time"].value.split(":")[0];
-  var minute = document.forms["addTask"]["time"].value.split(":")[1];
+  var hour=document.forms["addTask"]["timepicker"].value.split(" ")[0];
+  var minute = document.forms["addTask"]["timepicker"].value.split(" ")[2];
   activeDate.setHours(hour);
   activeDate.setMinutes(minute);
   tasks[taskcount]=[taskname,activeDate.getTime()];
