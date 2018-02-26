@@ -34,6 +34,8 @@ function updateCalendar(){
 //Create a new task when the button is pressed
 function createTask(){
   var taskname= document.forms["addTask"]["taskname"].value;
+  if(!taskname)
+  {return;}
   var hour=document.forms["addTask"]["timepicker"].value.split(" ")[0];
   var minute = document.forms["addTask"]["timepicker"].value.split(" ")[2];
   activeDate.setHours(hour);
