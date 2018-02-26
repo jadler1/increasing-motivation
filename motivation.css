@@ -1,5 +1,6 @@
 body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #637799;
 }
 
 .header{
@@ -151,12 +152,89 @@ ul {
   color: #BBB;
 }
 
-
-
-
 .checkbox{
 	width: 60px;
 	height: 60px;
 	border: 5px solid white;
 	border-radius: 50%;
+}
+
+/*formatting for items on the Shop page*/
+
+.container {
+  padding: 20px;
+  padding-top: 100px;
+  text-align: center;
+}
+.container .product {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 240px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.45);
+  margin: 20px;
+  padding: 15px;
+}
+
+.container .product h2 {
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.container .product .description {
+  text-align: left;
+  font-size: 11px;
+  color: #fff;
+  max-height: 23px;
+}
+.container .product .price {
+  text-align: right;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 6px;
+}
+.container .product .btn {
+  position: absolute;
+  font-size: 11px;
+  font-weight: bold;
+  float: right;
+  padding: 10px;
+  border: 2px solid #00fefe;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+  color: #00fefe;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container .product .btn.ok {
+  background-color: rgba(0, 254, 254, 0.4);
+  color: #fff;
+}
+.container .product .btn.ok:after {
+  content: "\e080";
+  color: #fff;
+}
+
+/*adds hover effects to buttons*/
+.container .product .btn:hover {
+  padding-right: 25px;
+}
+.container .product .btn:hover:after {
+  margin-left: 5px;
+}
+.container .product .btn:after {
+  font-family: "simple-line-icons";
+  content: "<";
+  transition: all 0.2s ease;
+  position: absolute;
+  color: #00fefe;
+  margin-left: 30px;
+  transition: all 0.2s ease;
 }
