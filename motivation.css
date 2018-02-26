@@ -167,20 +167,23 @@ ul {
   text-align: center;
 }
 
-.container .fox-image-wrapper {
-  width: 70%;
-}
-
 .container .bird-image-wrapper {
   width: 60%;
 }
 
+.container .fox-image-wrapper {
+  width: 70%;
+  padding-bottom: 15px
+}
+
 .container .cat-image-wrapper {
   width: 60%;
+  padding-bottom: 19px
 }
 
 .container .panda-image-wrapper {
   width: 60%;
+  padding-bottom: 2px
 }
 
 .container .product {
@@ -212,6 +215,7 @@ ul {
   text-align: left;
   font-size: 18px;
   color: #fff;
+  padding-top: 3px;
   margin-bottom: 6px;
 }
 .container .product .btn {
