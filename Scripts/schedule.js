@@ -102,3 +102,8 @@ function timeTillDue(due){
   }
   return timeDisp;
 }
+
+
+function moreOptions(){
+  console.log("Options clicked");
+}
