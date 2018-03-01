@@ -29,6 +29,6 @@ $(document).ready(function(){
     $("#prev").click(prevMonth);
     $("#next").click(nextMonth);
   }
-
+  $(".options").click(moreOptions);
 
 });
