@@ -32,5 +32,10 @@ $(document).ready(function(){
   if(document.title == "Schedule"){
     $(".options").click(moreOptions);
   }
+  if(document.title == "Shop"){
+    $(".product").on("click", ".btn", function(){
+      buy();
+    });
+  }
 
 });

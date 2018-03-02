@@ -11,7 +11,9 @@ if(localStorage.getItem("taskcount")){
 if(localStorage.getItem("points")){
   points = parseInt(localStorage.getItem("points"));
 }
-
+if(localStorage.getItem("pet")){
+  document.getElementById("pet").src= "images/bamboozle.png";
+}
 
 //display the points on the main screen
 var pointDisplay=document.getElementById("points");
