@@ -15,14 +15,14 @@ body{
 /* add task and back button */
 .left{
   height: 12.5vh;
-  width:  6vw;
+  width:  15vw;
   float: left;
 }
 
 /* points and page titles */
 .center{
   text-align: center;
-  font-size: 12.5vh;
+  font-size: 14vw;
   color: white;
 }
 
@@ -30,7 +30,7 @@ body{
 .right{
   float: right;
   height: 12vh;
-  width:  5vw;
+  width:  13vw;
   margin-right: 0.5vw;
 }
 
@@ -66,7 +66,7 @@ body{
 .shop-image-wrapper {
   float: right;
   height: 12vh;
-  width:  6vw;
+  width:  14vw;
   margin-right: 0.5vw;
 }
 
@@ -80,9 +80,19 @@ body{
 .timedue{
 	text-align: center;
 	color: white;
+	font-size: 10vw;
 }
 .addTaskButton{
 	text-align: center;
+}
+
+input[type="text"]
+{
+	font-size:5vw;
+}
+
+button[type="button"]{
+	font-size:5vw;
 }
 
 ul {
