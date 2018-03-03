@@ -12,7 +12,7 @@ if(localStorage.getItem("points")){
   points = parseInt(localStorage.getItem("points"));
 }
 if(localStorage.getItem("pet")){
-  document.getElementById("pet").src= "images/bamboozle.png";
+  document.getElementById("pet").src= "images/"+ localStorage.getItem("pet") +".png";
 }
 
 //display the points on the main screen
