@@ -222,28 +222,28 @@ ul {
   margin-bottom: 4px;
 }
 .container .product .description {
+  float: left;
   text-align: left;
-  font-size: 9px;
+  font-size: 13px;
   color: #fff;
   max-height: 23px;
+  display: inline-block;
 }
 .container .product .price {
-  text-align: left;
+  float: left;
   font-size: 18px;
   color: #fff;
-  padding-top: 3px;
   margin-bottom: 6px;
+  display: inline-block;
 }
 .container .product .btn {
-  position: absolute;
-  font-size: 11px;
+  position: relative;
+  font-size: 16px;
   font-weight: bold;
   float: right;
   padding: 10px;
   border: 2px solid #00fefe;
   border-radius: 20px;
-  bottom: 10px;
-  right: 10px;
   color: #00fefe;
   cursor: pointer;
   overflow: hidden;
