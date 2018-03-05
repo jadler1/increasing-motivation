@@ -38,11 +38,17 @@ for(var i = 0; i < 7;i++){
 }
 
 tasks.forEach(function(t){
-  if((t[1]-currentDate.getTime())>604800000){//if not this week
+  var date = new Date(t[1]);
+  if(dayno+(6-weekdayno)<date.getDate()){
     return;
   }
-  var date = new Date(t[1]);
-
+  var taskday = document.getElementsByClassName(date.getDay()+"");
+  var hour= date.getHours()*2;
+  if(date.getMinutes() >29){
+    hour++;
+  }
+  taskday[hour].innerHTML = t[0];
+  taskday[hour].id = "active";
 })
 
 

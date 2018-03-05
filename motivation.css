@@ -358,3 +358,6 @@ table thead tr th .short {
     font-size: 3vw;
 }
 
+#active{
+	font-weight: bold;
+}
