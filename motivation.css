@@ -20,32 +20,38 @@ div {
 
 /* add task and back button */
 .left{
+<<<<<<< HEAD
   height: 10vh;
+=======
+  height: 12.5vh;
+  width:  15vw;
+>>>>>>> parent of fa636d4... Scaling
   float: left;
-}
-
-.left:after{
-	padding-bottom: 100%;
 }
 
 /* points and page titles */
 .center{
   text-align: center;
+  font-size: 14vw;
   color: white;
+<<<<<<< HEAD
   font-size: 50px;
   display: inline-block;
   margin-top: 1.5vh;
+=======
+>>>>>>> parent of fa636d4... Scaling
 }
 
 /* calendar icon*/
 .right{
   float: right;
+<<<<<<< HEAD
   height: 10vh;
+=======
+  height: 12vh;
+  width:  13vw;
+>>>>>>> parent of fa636d4... Scaling
   margin-right: 0.5vw;
-}
-
-.right:after{
-	padding-bottom:100%;
 }
 
 .task-wrapper{
@@ -75,6 +81,13 @@ div {
   font-size: 20px;
   text-align: center;
   color: white;
+}
+
+.shop-image-wrapper {
+  float: right;
+  height: 12vh;
+  width:  14vw;
+  margin-right: 0.5vw;
 }
 
 .calendar {
