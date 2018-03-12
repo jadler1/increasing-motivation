@@ -1,88 +1,126 @@
-body{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-  background-color: slategray;
+/* primary font and color */
+body {
+  font-family: 'Muli', sans-serif;
+  background-color: #F4F6F7;
 }
 
-.header{
+.header {
   width: auto;
   height: 12.5vh;
   text-align: center;
   font-size: 70px;
-  background: #1abc9c;
+  background: #797D7F;
   color: white;
-}
-
-/* add task and back button */
-.left{
-  height: 12.5vh;
-  width:  15vw;
-  float: left;
 }
 
 /* points and page titles */
-.center{
+.center {
   text-align: center;
-  font-size: 14vw;
+  padding-top: 40px;
+  font-size: 12vw;
   color: white;
 }
 
-/* calendar icon*/
-.right{
+.calendar-header {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 12vw;
+  color: white;
+}
+
+/* pet in header bar */
+.left {
+  float: left;
+  margin-top: 20px;
+  width: 24vw;
+}
+
+.left-button {
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 18vw;
+}
+
+/* back button in calendar view */
+.back-button-calendar {
+  float: left;
+  margin-top: 8px;
+  width: 18vw;
+}
+
+/* calendar icon */
+.calendar-image-wrapper {
   float: right;
-  height: 12vh;
-  width:  13vw;
+  width: 15vw;
+  padding-top: 40px;
   margin-right: 0.5vw;
 }
 
-.task-wrapper{
-  width: 100%;
-  background: #1abc9c;
-}
-
-.big-column{
-  width:30vw;
-  font-size: 20px;
-  text-align: center;
-  color: white;
-}
-
-.small-column{
-  width:5vw;
-  font-size: 20px;
-  color: white;
-}
-
-.construction{
-  width: 100%;
-}
-
-
-.taskname{
-  font-size: 20px;
-  text-align: center;
-  color: white;
-}
-
-.shop-image-wrapper {
+/* shop icon */
+.shop-image-wrapper { 
   float: right;
-  height: 12vh;
-  width:  14vw;
+  width: 15vw;
+  padding-top: 40px;
   margin-right: 0.5vw;
+}
+
+/* shop icon in weekly calendar view */
+.shop-icon { 
+  float: right;
+  width: 15vw;
+  padding-top: 14px;
+  margin-right: 0.5vw;
+}
+
+.task-wrapper {
+  width: 100%;
+  background: white;
+}
+
+.big-column {
+  width: 27vw;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.small-column {
+  width: 8.3vw;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.construction {
+  width: 100%;
+}
+
+.taskname {
+  font-family: Muli;
+  font-size: 20px;
+  text-align: center;
+  color: white;
 }
 
 .calendar {
   width: 100%;
 }
 
-.timepicker{
+.keyboard-arrow {
+  width: 100%
+}
+
+.timepicker {
 	text-align: center;
 }
-.timedue{
+.timedue {
 	text-align: center;
-	color: white;
-	font-size: 10vw;
+  margin-left: 20px;
+	color: #909497;
+	font-size: 8vw;
 }
-.addTaskButton{
+.addTaskButton {
 	text-align: center;
 }
 
@@ -91,7 +129,7 @@ input[type="text"]
 	font-size:5vw;
 }
 
-button[type="button"]{
+button[type="button"] {
 	font-size:5vw;
 }
 
@@ -102,7 +140,7 @@ ul {
 .month {
     padding: 10px 0;
     width: 100%;
-    background: #1abc9c;
+    background: #73C6B6;
     text-align: center;
 }
 
@@ -113,7 +151,7 @@ ul {
 
 .month ul li {
     color: white;
-    font-size: 20px;
+    font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -121,24 +159,28 @@ ul {
 .month #prev {
     float: left;
     padding-top: 10px;
+    width: 10vw;
 }
 
 .month #next {
     float: right;
     padding-top: 10px;
+    width: 10vw;
 }
 
 .weekdays {
     margin: 0;
-    padding: 10px 0;
+    padding: 20px 0;
     background-color: #ddd;
 }
 
 .weekdays li {
+    padding-left: 22px;
     display: inline-block;
-    width: 13.6%;
+    width: 10%;
+    font-size: 40px;
     color: #666;
-    text-align: center;
+    text-align: right;
 }
 
 #days {
@@ -151,11 +193,11 @@ ul {
     list-style-type: none;
     display: inline-block;
     width: 13.2%;
-    margin-bottom: 5px;
-    font-size:12px;
+    margin-bottom: 60px;
+    font-size: 50px;
     color: #777;
-	margin-left: 0;
-	text-align: center;
+	  margin-left: 0;
+	  text-align: center;
 }
 
 #days li .active {
@@ -168,11 +210,17 @@ ul {
   color: #BBB;
 }
 
-.checkbox{
-	width: 60px;
-	height: 60px;
-	border: 5px solid white;
-	border-radius: 50%;
+.checkbox {
+	width: 70px;
+	height: 70px;
+	border: 4px solid white;
+}
+
+.task-button {
+  margin-top: 15px;
+  border-width: 2px;
+  font-family: Muli;
+  background-color: #ECF0F1;
 }
 
 /*formatting for items on the Shop page*/
@@ -225,7 +273,7 @@ ul {
   float: left;
   text-align: left;
   font-size: 13px;
-  color: #fff;
+  color: ##909497;
   max-height: 23px;
   display: inline-block;
 }
@@ -278,7 +326,7 @@ ul {
 
 /*calendar css*/
 table {
-  font-family: sans-serif;
+  font-family: Muli;
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;

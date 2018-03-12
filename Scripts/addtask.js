@@ -35,7 +35,10 @@ function updateCalendar(){
 function createTask(){
   var taskname= document.forms["addTask"]["taskname"].value;
   if(!taskname)
-  {return;}
+  {
+    alert("Enter a name for your task.");
+    return;
+  }
   var hour=document.forms["addTask"]["timepicker"].value.split(" ")[0];
   var minute = document.forms["addTask"]["timepicker"].value.split(" ")[2];
   activeDate.setHours(hour);
@@ -133,7 +136,7 @@ function getCalendarMonth()
 {
   var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var month = months[monthno];
-  return month +"<br><span style=\"font-size:18px\">" + year + "</span>";
+  return month +"<br><span style=\"font-size:40px\">" + year + "</span>";
 }
 
 
