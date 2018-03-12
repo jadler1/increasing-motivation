@@ -5,6 +5,7 @@ body {
   background-color: #F4F6F7;
 =======
 body{
+<<<<<<< HEAD
 	background-color: slategray;
 }
 @font-face {
@@ -15,12 +16,17 @@ body{
 div {
     font-family: funFont;
 >>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
+=======
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: slategray;
+>>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
 }
 
 .header {
   width: auto;
-  height: 10vh;
+  height: 12.5vh;
   text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-size: 70px;
   background: #797D7F;
@@ -40,28 +46,52 @@ div {
   padding-top: 18px;
   font-size: 12vw;
 =======
+=======
+  font-size: 70px;
+>>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
   background: #1abc9c;
   color: white;
 }
 
 /* add task and back button */
 .left{
+<<<<<<< HEAD
+<<<<<<< HEAD
   height: 10vh;
+=======
+  height: 12.5vh;
+  width:  15vw;
+>>>>>>> parent of fa636d4... Scaling
+=======
+  height: 12.5vh;
+>>>>>>> parent of 4dbd6b5... Scaling Fix?
   float: left;
-}
-
-.left:after{
-	padding-bottom: 100%;
 }
 
 /* points and page titles */
 .center{
   text-align: center;
+<<<<<<< HEAD
 >>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
+=======
+  font-size: 14vw;
+>>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
   color: white;
+<<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 50px;
   display: inline-block;
+<<<<<<< HEAD
   margin-top: 1.5vh;
+=======
+>>>>>>> parent of fa636d4... Scaling
+=======
+>>>>>>> parent of b648f1b... moved points down a little
+=======
+  font-size: 100px;
+  display: inline-block;
+  margin-top: 2vh;
+>>>>>>> parent of d15a277... More font stuff
 }
 
 /* pet in header bar */
@@ -96,6 +126,7 @@ div {
 /* shop icon */
 .shop-image-wrapper { 
   float: right;
+<<<<<<< HEAD
   width: 15vw;
   padding-top: 40px;
   margin-right: 0.5vw;
@@ -112,12 +143,19 @@ div {
 
 .task-wrapper {
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
   height: 10vh;
+=======
+  height: 12vh;
+  width:  13vw;
+>>>>>>> parent of fa636d4... Scaling
+=======
+  height: 12vh;
+>>>>>>> parent of 4dbd6b5... Scaling Fix?
   margin-right: 0.5vw;
-}
-
-.right:after{
-	padding-bottom:100%;
 }
 
 .task-wrapper{
@@ -149,6 +187,13 @@ div {
   font-size: 20px;
   text-align: center;
   color: white;
+}
+
+.shop-image-wrapper {
+  float: right;
+  height: 12vh;
+  width:  14vw;
+  margin-right: 0.5vw;
 }
 
 .calendar {
@@ -375,10 +420,14 @@ ul {
 /*calendar css*/
 table {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Muli;
 =======
   font-family: funFont;
 >>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
+=======
+  font-family: sans-serif;
+>>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
