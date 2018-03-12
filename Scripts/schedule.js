@@ -11,7 +11,9 @@ if(localStorage.getItem("taskcount")){
 if(localStorage.getItem("points")){
   points = parseInt(localStorage.getItem("points"));
 }
-
+if(localStorage.getItem("pet")){
+  document.getElementById("pet").src= "images/"+ localStorage.getItem("pet") +".png";
+}
 
 //display the points on the main screen
 var pointDisplay=document.getElementById("points");
@@ -101,4 +103,9 @@ function timeTillDue(due){
     timeDisp += mins + " Minute";
   }
   return timeDisp;
+}
+
+
+function moreOptions(){
+  console.log("Options clicked");
 }

@@ -9,14 +9,15 @@
   <script src="Scripts/jquery.js"></script>
   <script type="text/javascript" src="Scripts/wickedpicker/src/wickedpicker.js"></script>
   <link rel="stylesheet" type="text/css" href="Scripts/wickedpicker/stylesheets/wickedpicker.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
   <div class="header">
     <a href="schedule.html">
-      <img class="left" src="images/back.png">
+      <img class="left-button" src="images/leftArrow.png">
     </a>
     <a href="calendar.html">
-      <img class="right" src="images/calendar.png">
+      <img class="calendar-image-wrapper" src="images/calendar.png">
     </a>
     <div class="center">
       Add Task
@@ -24,8 +25,7 @@
   </div>
   <hr>
 
-
-
+<!--Add Task page-->
   <form name="addTask">
 
     <div class = "taskname">
@@ -35,12 +35,10 @@
       <div class="month">
         <ul>
           <div id="changeMonth">
-            <li id="prev"><i class="material-icons">keyboard_arrow_left</i></li>
-            <li id="next"><i class="material-icons">keyboard_arrow_right</i></li>
+            <li id="prev"><img class="keyboard-arrow" src="images/keyboardArrowLeft.png"></li>
+            <li id="next"><img class="keyboard-arrow" src="images/keyboardArrowRight.png"></li>
           </div>
-          <li id="year">
-
-          </li>
+          <li id="year"></li>
         </ul>
       </div>
 
@@ -59,17 +57,19 @@
       </div>
     </div>
     <br>
+	<div class="timedue">
+      Time Due <br>
+	  </div>
     <div class="timepicker">
-      Time Due: <br>
+
       <input type="text" name="timepicker" class="timepicker"/>
     </div>
 
   </form>
   <script src="Scripts/addtask.js"></script>
   <div class="addTaskButton">
-  <button type="button" onClick="createTask()">Create Task</button>
+  <button class="task-button" type="button" onClick="createTask()">Create Task</button>
   </div>
-
 
 </body>
 </html>

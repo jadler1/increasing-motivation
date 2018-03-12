@@ -29,6 +29,9 @@ $(document).ready(function(){
     $("#prev").click(prevMonth);
     $("#next").click(nextMonth);
   }
+  if(document.title == "Schedule"){
+    $(".options").click(moreOptions);
+  }
 
 
 });
