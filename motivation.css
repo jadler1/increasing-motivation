@@ -32,6 +32,7 @@ body{
   font-size: 14vw;
   color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 50px;
   display: inline-block;
 <<<<<<< HEAD
@@ -40,6 +41,11 @@ body{
 >>>>>>> parent of fa636d4... Scaling
 =======
 >>>>>>> parent of b648f1b... moved points down a little
+=======
+  font-size: 100px;
+  display: inline-block;
+  margin-top: 2vh;
+>>>>>>> parent of d15a277... More font stuff
 }
 
 /* calendar icon*/
@@ -302,7 +308,7 @@ ul {
 
 /*calendar css*/
 table {
-  font-family: funFont;
+  font-family: sans-serif;
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
