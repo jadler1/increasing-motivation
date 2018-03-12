@@ -7,6 +7,7 @@ body{
   width: auto;
   height: 12.5vh;
   text-align: center;
+  font-size: 70px;
   background: #1abc9c;
   color: white;
 }
