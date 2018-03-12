@@ -12,7 +12,7 @@ div {
 
 .header{
   width: auto;
-  height: 10vh;
+  height: 12.5vh;
   text-align: center;
   background: #1abc9c;
   color: white;
@@ -21,11 +21,15 @@ div {
 /* add task and back button */
 .left{
 <<<<<<< HEAD
+<<<<<<< HEAD
   height: 10vh;
 =======
   height: 12.5vh;
   width:  15vw;
 >>>>>>> parent of fa636d4... Scaling
+=======
+  height: 12.5vh;
+>>>>>>> parent of 4dbd6b5... Scaling Fix?
   float: left;
 }
 
@@ -46,11 +50,15 @@ div {
 .right{
   float: right;
 <<<<<<< HEAD
+<<<<<<< HEAD
   height: 10vh;
 =======
   height: 12vh;
   width:  13vw;
 >>>>>>> parent of fa636d4... Scaling
+=======
+  height: 12vh;
+>>>>>>> parent of 4dbd6b5... Scaling Fix?
   margin-right: 0.5vw;
 }
 
