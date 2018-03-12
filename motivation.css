@@ -1,6 +1,13 @@
 body{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-  background-color: slategray;
+	background-color: slategray;
+}
+@font-face {
+    font-family: funFont;
+    src: url(Kavoon-Regular.otf);
+}
+
+div {
+    font-family: funFont;
 }
 
 .header{
