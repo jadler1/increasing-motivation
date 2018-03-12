@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> nathan
 /* primary font and color */
 body {
   font-family: 'Muli', sans-serif;
   background-color: #F4F6F7;
+<<<<<<< HEAD
 =======
 body{
 <<<<<<< HEAD
@@ -20,11 +24,14 @@ div {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: slategray;
 >>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
+=======
+>>>>>>> nathan
 }
 
 .header {
   width: auto;
   height: 12.5vh;
+<<<<<<< HEAD
   text-align: center;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,12 +49,15 @@ div {
 }
 
 .calendar-header {
+=======
+>>>>>>> nathan
   text-align: center;
   padding-top: 18px;
   font-size: 12vw;
 =======
 =======
   font-size: 70px;
+<<<<<<< HEAD
 >>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
   background: #1abc9c;
   color: white;
@@ -66,16 +76,32 @@ div {
   height: 12.5vh;
 >>>>>>> parent of 4dbd6b5... Scaling Fix?
   float: left;
+=======
+  background: #797D7F;
+  color: white;
 }
 
 /* points and page titles */
-.center{
+.center {
   text-align: center;
+  padding-top: 40px;
+  font-size: 12vw;
+  color: white;
+>>>>>>> nathan
+}
+
+.calendar-header {
+  text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
 =======
   font-size: 14vw;
 >>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
+=======
+  padding-top: 18px;
+  font-size: 12vw;
+>>>>>>> nathan
   color: white;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,6 +134,23 @@ div {
   width: 18vw;
 }
 
+<<<<<<< HEAD
+=======
+/* pet in header bar */
+.left {
+  float: left;
+  margin-top: 20px;
+  width: 24vw;
+}
+
+.left-button {
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 18vw;
+}
+
+>>>>>>> nathan
 /* back button in calendar view */
 .back-button-calendar {
   float: left;
@@ -127,6 +170,9 @@ div {
 .shop-image-wrapper { 
   float: right;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> nathan
   width: 15vw;
   padding-top: 40px;
   margin-right: 0.5vw;
@@ -135,6 +181,7 @@ div {
 /* shop icon in weekly calendar view */
 .shop-icon { 
   float: right;
+<<<<<<< HEAD
 <<<<<<< HEAD
   width: 15vw;
   padding-top: 14px;
@@ -160,6 +207,14 @@ div {
 
 .task-wrapper{
 >>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
+=======
+  width: 15vw;
+  padding-top: 14px;
+  margin-right: 0.5vw;
+}
+
+.task-wrapper {
+>>>>>>> nathan
   width: 100%;
   background: white;
 }
@@ -189,6 +244,7 @@ div {
   color: white;
 }
 
+<<<<<<< HEAD
 .shop-image-wrapper {
   float: right;
   height: 12vh;
@@ -196,6 +252,8 @@ div {
   margin-right: 0.5vw;
 }
 
+=======
+>>>>>>> nathan
 .calendar {
   width: 100%;
 }
@@ -205,6 +263,18 @@ div {
 }
 
 .timepicker {
+<<<<<<< HEAD
+=======
+	text-align: center;
+}
+.timedue {
+	text-align: center;
+  margin-left: 20px;
+	color: #909497;
+	font-size: 8vw;
+}
+.addTaskButton {
+>>>>>>> nathan
 	text-align: center;
 }
 .timedue {
@@ -215,6 +285,15 @@ div {
 }
 .addTaskButton {
 	text-align: center;
+}
+
+input[type="text"]
+{
+	font-size:5vw;
+}
+
+button[type="button"] {
+	font-size:5vw;
 }
 
 input[type="text"]
@@ -421,6 +500,7 @@ ul {
 table {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Muli;
 =======
   font-family: funFont;
@@ -428,6 +508,9 @@ table {
 =======
   font-family: sans-serif;
 >>>>>>> 4a1a1ae2deb251a05e6373fa0ac2e36a99475e77
+=======
+  font-family: Muli;
+>>>>>>> nathan
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
