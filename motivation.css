@@ -15,23 +15,30 @@ body{
 /* add task and back button */
 .left{
   height: 12.5vh;
-  width:  15vw;
   float: left;
+}
+
+.left:after{
+	padding-bottom: 100%;
 }
 
 /* points and page titles */
 .center{
   text-align: center;
-  font-size: 14vw;
   color: white;
+  font-size: 100px;
+  display: inline-block;
 }
 
 /* calendar icon*/
 .right{
   float: right;
   height: 12vh;
-  width:  13vw;
   margin-right: 0.5vw;
+}
+
+.right:after{
+	padding-bottom:100%;
 }
 
 .task-wrapper{
@@ -61,13 +68,6 @@ body{
   font-size: 20px;
   text-align: center;
   color: white;
-}
-
-.shop-image-wrapper {
-  float: right;
-  height: 12vh;
-  width:  14vw;
-  margin-right: 0.5vw;
 }
 
 .calendar {
