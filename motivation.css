@@ -1,13 +1,27 @@
+<<<<<<< HEAD
 /* primary font and color */
 body {
   font-family: 'Muli', sans-serif;
   background-color: #F4F6F7;
+=======
+body{
+	background-color: slategray;
+}
+@font-face {
+    font-family: funFont;
+    src: url(Kavoon-Regular.otf);
+}
+
+div {
+    font-family: funFont;
+>>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
 }
 
 .header {
   width: auto;
-  height: 12.5vh;
+  height: 10vh;
   text-align: center;
+<<<<<<< HEAD
   font-size: 70px;
   background: #797D7F;
   color: white;
@@ -25,7 +39,29 @@ body {
   text-align: center;
   padding-top: 18px;
   font-size: 12vw;
+=======
+  background: #1abc9c;
   color: white;
+}
+
+/* add task and back button */
+.left{
+  height: 10vh;
+  float: left;
+}
+
+.left:after{
+	padding-bottom: 100%;
+}
+
+/* points and page titles */
+.center{
+  text-align: center;
+>>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
+  color: white;
+  font-size: 50px;
+  display: inline-block;
+  margin-top: 1.5vh;
 }
 
 /* pet in header bar */
@@ -68,12 +104,24 @@ body {
 /* shop icon in weekly calendar view */
 .shop-icon { 
   float: right;
+<<<<<<< HEAD
   width: 15vw;
   padding-top: 14px;
   margin-right: 0.5vw;
 }
 
 .task-wrapper {
+=======
+  height: 10vh;
+  margin-right: 0.5vw;
+}
+
+.right:after{
+	padding-bottom:100%;
+}
+
+.task-wrapper{
+>>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
   width: 100%;
   background: white;
 }
@@ -326,7 +374,11 @@ ul {
 
 /*calendar css*/
 table {
+<<<<<<< HEAD
   font-family: Muli;
+=======
+  font-family: funFont;
+>>>>>>> 7c4c52cc17a8faf3410a31491c2907396b28f111
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
