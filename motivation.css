@@ -5,7 +5,7 @@ body{
 
 .header{
   width: auto;
-  height: 12.5vh;
+  height: 10vh;
   text-align: center;
   font-size: 70px;
   background: #1abc9c;
@@ -14,7 +14,7 @@ body{
 
 /* add task and back button */
 .left{
-  height: 12.5vh;
+  height: 10vh;
   float: left;
 }
 
@@ -33,7 +33,7 @@ body{
 /* calendar icon*/
 .right{
   float: right;
-  height: 12vh;
+  height: 10vh;
   margin-right: 0.5vw;
 }
 
