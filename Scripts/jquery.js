@@ -32,6 +32,19 @@ $(document).ready(function(){
   if(document.title == "Schedule"){
     $(".options").click(moreOptions);
   }
-
+  if(document.title=="Calendar"){
+    $(".toggle").click(function(){
+      if(localStorage.getItem("viewType")==="Weekly"){
+        localStorage.setItem("viewType", "Monthly");
+        viewTog="Monthly";
+        updateView();
+      }
+      else{
+        localStorage.setItem("viewType", "Weekly");
+        viewTog="Weekly";
+        updateView();
+      }
+    });
+  }
 
 });
