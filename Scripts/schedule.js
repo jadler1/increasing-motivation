@@ -53,7 +53,7 @@ function fillTaskList(){
 
 //Add a row to the task list with the new task info
 function fillTask(name, duedate, points, index){
-	var rowData = "<tr><td class=\"small-column\"><div id=\"task"+index+"\" class=\"checkbox\"></div></td><td class=\"big-column\">"+ name +"</td><td class=\"big-column\">"+ duedate +"</td><td class=\"big-column\">"+ points +"</td><td class=\"small-column\"><div class=\"options\"><div class=\"dropdown\"><button onclick=\"myFunction()\" class=\"dropbtn\">...</button><div id=\"myDropdown\" class=\"dropdown-content\">Delete Task</div></div></div></td></tr>";
+	var rowData = "<tr><td class=\"small-column\"><div id=\"task"+index+"\" class=\"checkbox\"></div></td><td class=\"big-column\">"+ name +"</td><td class=\"big-column\">"+ duedate +"</td><td class=\"big-column\">"+ points +"</td><td class=\"small-column\"><div class=\"options\"><div class=\"dropdown\"><button onclick=\"moreOptions("+index+")\" class=\"dropbtn\">...</button><div id=\"myDropdown\" class=\"dropdown-content\">Delete Task</div></div></div></td></tr>";
 	return rowData;
 }
 
@@ -105,7 +105,42 @@ function timeTillDue(due){
   return timeDisp;
 }
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
-function moreOptions(){
-  console.log("Options clicked");
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function moreOptions(index){
+    document.getElementById("myDropdown").classList.toggle("show");
+
+
+}
+
+function deleteTask(){
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        tasks.splice(i,1);
+      }
+    }
+    taskcount--;
+    localStorage.setItem("taskcount", taskcount);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    fillTaskList();
+    window.location.reload();
+
 }

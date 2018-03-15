@@ -29,8 +29,8 @@ $(document).ready(function(){
     $("#prev").click(prevMonth);
     $("#next").click(nextMonth);
   }
-  if(document.title == "Remindr"){
-    $(".options").click(moreOptions);
+  if(document.title=="Remindr"){
+    $(".dropdown-content").click(deleteTask);
   }
   if(document.title=="Calendar"){
     $(".toggle").click(function(){
