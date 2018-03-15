@@ -3,64 +3,58 @@ if(!localStorage.getItem("viewType")){
   localStorage.setItem("viewType", "Weekly");
 }
 var viewType = localStorage.getItem("viewType");
-document.getElementById("viewTog").innerHTML=viewType;
+document.getElementById("viewType").innerHTML=viewType;
 
 if(localStorage.getItem("tasks")){
   tasks = JSON.parse(localStorage.getItem("tasks"));
 }
 var weekdays= ["sun","mon","tue","wed","thu","fri","sat"];
 var timetable = document.getElementById("times");
-fillCalendarTimes();
+
 const currentDate = new Date();
 var year = currentDate.getFullYear();
 var monthno= currentDate.getMonth();
 var weekdayno = currentDate.getDay();
 var weekday = 0;
 var dayno = currentDate.getDate();
-var j = dayno-weekdayno;
+var daysThisMonth = getDaysThisMonth(monthno, year);
 
-for(var i = 0; i < 7;i++){
-  weekday= weekdays[i];
-  var temp=j;
-  if(j<1)
-  {
-    var daysLastMonth=0;
-    if(monthno==0)
-    {
-      daysLastMonth=getDaysThisMonth(11,year-1);
-    }
-    else{
-      daysLastMonth=getDaysThisMonth(monthno-1, year);
-    }
-    j = daysLastMonth+j;
-  }
-  document.getElementById(weekday).innerHTML=j;
-  j = temp;
-  if(j==getDaysThisMonth(monthno,year)) {
-    j=0;
-  }
-  j++;
+if(viewType==="Weekly"){
+  fillCalendarTimes();
+}
+else{
+  fillCalendarDays();
 }
 
-tasks.forEach(function(t){
-  var date = new Date(t[1]);
-  if(dayno+(6-weekdayno)<date.getDate()){
-    return;
-  }
-  var taskday = document.getElementsByClassName(date.getDay()+"");
-  var hour= date.getHours()*2;
-  if(date.getMinutes() >29){
-    hour++;
-  }
-  taskday[hour].innerHTML = t[0];
-  taskday[hour].id = "active";
-})
 
 
 
 
 
 function fillCalendarTimes(){
+  var j = dayno-weekdayno;
+  for(var i = 0; i < 7;i++){
+    weekday= weekdays[i];
+    var temp=j;
+    if(j<1)
+    {
+      var daysLastMonth=0;
+      if(monthno==0)
+      {
+        daysLastMonth=getDaysThisMonth(11,year-1);
+      }
+      else{
+        daysLastMonth=getDaysThisMonth(monthno-1, year);
+      }
+      j = daysLastMonth+j;
+    }
+    document.getElementById(weekday).innerHTML=j;
+    j = temp;
+    if(j==getDaysThisMonth(monthno,year)) {
+      j=0;
+    }
+    j++;
+  }
   var calhtml = "";
   for(var i = 0; i <24;i++){
     var j = (i%12);
@@ -83,6 +77,82 @@ function fillCalendarTimes(){
 
   }
   timetable.innerHTML=calhtml;
+  tasks.forEach(function(t){
+    var date = new Date(t[1]);
+    if(dayno+(6-weekdayno)<date.getDate()){
+      return;
+    }
+    var taskday = document.getElementsByClassName(date.getDay()+"");
+    var hour= date.getHours()*2;
+    if(date.getMinutes() >29){
+      hour++;
+    }
+    taskday[hour].innerHTML = t[0];
+    taskday[hour].id = "active";
+  });
+}
+
+
+
+function fillCalendarDays(){
+  var cal = [];
+  var date = currentDate;
+  var day = date.getUTCDate();
+  var i =0;
+  //fill in the calendar
+  for(i = 1; i <= daysThisMonth; i++){
+    cal.push(i);
+  }
+  //add the last month padding
+  var daysLastMonth=0;
+  if(monthno==0)
+  {
+    daysLastMonth=getDaysThisMonth(11,year-1);
+  }
+  else{
+    daysLastMonth=getDaysThisMonth(monthno-1, year);
+  }
+  i = (day%7)-1;
+  while(i%7!=weekdayno)
+  {
+    cal.unshift(daysLastMonth);
+    daysLastMonth--;
+    i++;
+  }
+  //add the next month padding
+  i=1;
+  while(cal.length < 42)
+  {
+    cal.push(i);
+    i++;
+  }
+
+
+  //actually fill html
+  var calhtml = "<tr><td></td>";
+  var currentMonth=false;
+  var count = 0;
+  for(i=1; i<=6; i++){
+    for(var j= 1; j<=7;j++){
+        if(cal[count]==1){
+          currentMonth = !currentMonth;
+        }
+        if(currentMonth){
+          calhtml+="<td class=\"mview\">"+cal[count]+"</td>";
+        }
+        else {
+          calhtml+="<td class=\"imview\">"+cal[count]+"</td>";
+        }
+        count++;
+    }
+    calhtml+="</tr>";
+    if(i!=6){
+      calhtml+="<tr><td></td>";
+    }
+  }
+
+
+  timetable.innerHTML=calhtml;
 }
 
 
@@ -95,13 +165,17 @@ function getDaysThisMonth(mo, yr){
     case 7:
     case 9:
     case 11:
-      return 31;
+    return 31;
     case 1:
-      if(yr%4 ==0 && yr%100 !=0){
-        return 29;
-      }
-      return 28;
+    if(yr%4 ==0 && yr%100 !=0){
+      return 29;
+    }
+    return 28;
     default:
-      return 30;
+    return 30;
   }
+}
+
+function updateView(){
+  window.location.reload();
 }
