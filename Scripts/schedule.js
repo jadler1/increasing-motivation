@@ -53,7 +53,7 @@ function fillTaskList(){
 
 //Add a row to the task list with the new task info
 function fillTask(name, duedate, points, index){
-	var rowData = "<tr><td class=\"small-column\"><div id=\"task"+index+"\" class=\"checkbox\"></div></td><td class=\"big-column\">"+ name +"</td><td class=\"big-column\">"+ duedate +"</td><td class=\"big-column\">"+ points +"</td><td class=\"small-column\"><div class=\"options\"><i class=\"material-icons\">more_horiz</i></div></td></tr>";
+	var rowData = "<tr><td class=\"small-column\"><div id=\"task"+index+"\" class=\"checkbox\"></div></td><td class=\"big-column\">"+ name +"</td><td class=\"big-column\">"+ duedate +"</td><td class=\"big-column\">"+ points +"</td><td class=\"small-column\"><div class=\"options\"><div class=\"dropdown\"><button onclick=\"myFunction()\" class=\"dropbtn\">...</button><div id=\"myDropdown\" class=\"dropdown-content\">Delete Task</div></div></div></td></tr>";
 	return rowData;
 }
 
