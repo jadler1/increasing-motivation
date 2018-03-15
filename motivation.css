@@ -300,9 +300,9 @@ ul {
   float: right;
   margin-top: 42px;
   padding: 20px;
-  border: 2px solid #00fefe;
+  border: 2px solid #8080ff;
   border-radius: 50px;
-  color: #00fefe;
+  color: #8080ff;
   cursor: pointer;
   overflow: hidden;
   -webkit-transition: all 0.2s ease;
@@ -326,10 +326,10 @@ ul {
 }
 .container .product .btn:after {
   font-family: "simple-line-icons";
-  content: "<";
+  content: "✓";
   transition: all 0.2s ease;
   position: absolute;
-  color: #00fefe;
+  color: #8080ff;
   margin-left: 30px;
   transition: all 0.2s ease;
 }
