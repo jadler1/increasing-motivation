@@ -261,7 +261,7 @@ ul {
   position: relative;
   overflow: hidden;
   width: 600px;
-  height: 720px;
+  height: 640px;
   display: inline-block;
   border-radius: 0px;
   background-color: rgba(255, 255, 255, 0.45);
@@ -271,8 +271,8 @@ ul {
 
 .container .product h2 {
   text-align: left;
-  color: #d98cb3;
-  font-size: 50px;
+  color: #fff;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -420,12 +420,12 @@ table thead tr th .short {
     font-size: 3.5vw;
 }
 
-.mview{
+table tbody tr td .mview{
   font-size: 2vw;
   text-align: left;
 }
 
-.imview{
+table tbody tr td .imview{
   font-size: 2vw;
   text-align: left;
   color: #bbbbbb;
