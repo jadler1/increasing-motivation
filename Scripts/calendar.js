@@ -1,4 +1,9 @@
 var tasks = [];
+if(!localStorage.getItem("viewType")){
+  localStorage.setItem("viewType", "Weekly");
+}
+var viewType = localStorage.getItem("viewType");
+document.getElementById("viewTog").innerHTML=viewType;
 
 if(localStorage.getItem("tasks")){
   tasks = JSON.parse(localStorage.getItem("tasks"));

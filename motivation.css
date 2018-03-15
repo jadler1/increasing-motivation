@@ -445,6 +445,10 @@ table thead tr th .short {
     display: block;
 }
 
+.toggle {
+  font-size: 2vw;
+}
+
 .dropdown a:hover {background-color: #ddd}
 
 .show {display:block;}
