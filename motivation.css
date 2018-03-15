@@ -390,6 +390,8 @@ table tbody tr:nth-child(4n+0) td {
 }
 table tbody tr td {
   text-align: center;
+  padding: 6px 6px;
+  color: white;
   vertical-align: middle;
   border-left: 1px solid #626E7E;
   position: relative;
@@ -427,9 +429,10 @@ table tbody tr td .mview{
 }
 
 table tbody tr td .imview{
+  padding: 5px 5px;
   font-size: 2vw;
   text-align: left;
-  color: #bbbbbb;
+  color: #ff99bb;
 }
 
 #active{
