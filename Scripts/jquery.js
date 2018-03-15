@@ -29,7 +29,7 @@ $(document).ready(function(){
     $("#prev").click(prevMonth);
     $("#next").click(nextMonth);
   }
-  if(document.title == "Schedule"){
+  if(document.title == "Remindr"){
     $(".options").click(moreOptions);
   }
   if(document.title=="Calendar"){

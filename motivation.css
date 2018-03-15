@@ -406,6 +406,17 @@ table thead tr th .short {
     font-size: 3vw;
 }
 
+.mview{
+  font-size: 2vw;
+  text-align: left;
+}
+
+.imview{
+  font-size: 2vw;
+  text-align: left;
+  color: #bbbbbb;
+}
+
 #active{
 	font-weight: bold;
 }
