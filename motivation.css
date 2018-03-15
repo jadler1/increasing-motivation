@@ -99,6 +99,7 @@ body {
 }
 
 .taskname {
+  margin-top: 30px;
   font-family: Muli;
   font-size: 20px;
   text-align: center;
