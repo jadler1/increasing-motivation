@@ -93,7 +93,7 @@ function fillCalendarTimes(){
 }
 
 
-
+//todo: tasks in monthly view
 function fillCalendarDays(){
   var cal = [];
   var date = currentDate;
@@ -138,10 +138,10 @@ function fillCalendarDays(){
           currentMonth = !currentMonth;
         }
         if(currentMonth){
-          calhtml+="<td class=\"mview\">"+cal[count]+"</td>";
+          calhtml+="<td><span class=\"mview\">"+cal[count]+"</span><span id=\"m"+cal[count]+"\"+</td>";
         }
         else {
-          calhtml+="<td class=\"imview\">"+cal[count]+"</td>";
+          calhtml+="<td><span class=\"imview\">"+cal[count]+"</span></td>";
         }
         count++;
     }
@@ -150,9 +150,16 @@ function fillCalendarDays(){
       calhtml+="<tr><td></td>";
     }
   }
-
-
   timetable.innerHTML=calhtml;
+  tasks.forEach(function(t){
+    var date = new Date(t[1]);
+    var day = "m" + date.getDate();
+    var taskday = document.getElementById(day);
+    taskday.innerHTML += t[0];
+  });
+
+
+
 }
 
 
