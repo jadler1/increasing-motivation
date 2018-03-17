@@ -258,6 +258,17 @@ ul {
   width: 60%;
 }
 
+.container .mammoth-image-wrapper {
+  width: 60%;
+  padding-bottom: 4px;
+}
+
+.container .dog-image-wrapper {
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+
 .container .product {
   position: relative;
   overflow: hidden;
@@ -268,6 +279,7 @@ ul {
   background-color: rgba(255, 255, 255, 0.45);
   margin: 20px;
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .container .product h2 {
